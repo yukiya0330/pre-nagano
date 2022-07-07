@@ -1,2 +1,45 @@
-<h1>Homes#top</h1>
-<p>Find me in app/views/homes/top.html.erb</p>
+<div class="container-fluid">
+  <div class="row">
+    
+    <!-- 4列をサイドメニューに割り当て -->
+    <div class="mx-auto col-4">
+      <table class="table table-bordered text-center">
+        <thead>
+          <tr>
+            <th>ジャンル検索</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>チョコレート</td>
+          </tr>
+          <tr>
+            <td>焼き菓子</td>
+          </tr>
+        </tbody>
+      </table>   
+    </div>
+
+    <!-- 残り8列はコンテンツ表示部分として使う -->
+    <div class="mx-auto col-8">
+      <div class="card" style="max-width: 80%;">
+        <img class="card-img" src="assets/shop_image.jpg" alt="">
+        <div class="card-img-overlay">
+          <p class="text-white">
+          ようこそ、ながのCAKEへ！<br>
+          このサイトは、ケーキ販売のECサイトになります。<br>
+          会員でない方も商品の閲覧はできますが、<br>
+          購入には会員登録が必要になります。
+          </p>
+        </div>
+      </div>
+      <div class="mt-3">
+        <h2>新着商品</h2>
+        <p>新着商品一覧（作成中）</p>
+        <div class="text-right">
+          <%= link_to "全ての商品を見る>", "#" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
