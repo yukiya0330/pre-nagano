@@ -10,7 +10,7 @@ class DeviseCreateCustomers < ActiveRecord::Migration[6.1]
       t.string :name_last,          null: false
       t.string :name_first_kana,    null: false
       t.string :name_last_kana,     null: false
-      t.string :post_code,          null: false
+      t.string :postal_code,        null: false
       t.string :address,            null: false
       t.string :phone_number,       null: false
 
