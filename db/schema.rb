@@ -27,13 +27,13 @@ ActiveRecord::Schema.define(version: 2022_07_04_234452) do
   create_table "customers", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
-    t.string "name_first", null: false
-    t.string "name_last", null: false
-    t.string "name_first_kana", null: false
-    t.string "name_last_kana", null: false
-    t.string "postal_code", null: false
-    t.string "address", null: false
-    t.string "phone_number", null: false
+    t.string "name_first"
+    t.string "name_last"
+    t.string "name_first_kana"
+    t.string "name_last_kana"
+    t.string "postal_code"
+    t.string "address"
+    t.string "phone_number"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
