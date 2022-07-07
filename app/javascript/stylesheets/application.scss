@@ -7,6 +7,9 @@
 .navbar-nav a{
   margin-left: 30px;
 }
-.top-image{
-  background-image: url("images/shop_image.jpg");
+.card-img-overlay{
+  padding: 0;
+  top: calc(50% - 3rem);
+  text-align: center;
+  font-weight: bold;
 }
