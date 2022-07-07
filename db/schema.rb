@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2022_07_04_234452) do
     t.string "name_last", null: false
     t.string "name_first_kana", null: false
     t.string "name_last_kana", null: false
-    t.string "post_code", null: false
+    t.string "postal_code", null: false
     t.string "address", null: false
     t.string "phone_number", null: false
     t.string "reset_password_token"
