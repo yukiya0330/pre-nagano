@@ -14,7 +14,8 @@ Rails.application.routes.draw do
   }
   
   namespace :public do
-    resources :items
+    resources :items, only: [:index, :show]
+    resources :carts, only: [:show]
   end  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

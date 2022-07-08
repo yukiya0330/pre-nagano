@@ -1,2 +1,26 @@
-<h1>Public::Carts#show</h1>
-<p>Find me in app/views/public/carts/show.html.erb</p>
+<div class="container">
+  <div class="row">
+    <h2>ショッピングカート</h2>
+    <%= link_to "カートを空にする", "#" %>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">商品名</th>
+          <th scope="col">単価（税込）</th>
+          <th scope="col">数量</th>
+          <th scope="col">小計</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+          <td><%= link_to "削除する", "#" %></td>
+        </tr>
+      </tbody>
+    </table>  
+  </div>
+</div>
