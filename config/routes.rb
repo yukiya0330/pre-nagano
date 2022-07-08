@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     sessions: 'public/sessions'
   }
   
-  resources :items, only: [:index, :show, :create, :destroy]
+  namespace :public do
+    resources :items
+  end  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
