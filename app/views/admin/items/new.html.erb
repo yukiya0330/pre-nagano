@@ -17,7 +17,7 @@
   
   <div class="field">
     <label for="name" class="col col-xs-12 col-sm-4 col-md-3 control-label">ジャンル</label>
-    <%= f.text_feald :genre_id, autofocus: true, autocomplete: "genre_id" %>
+    <%= f.collection_select :genre_id, Genre.all, :id, :name, include_blank: "選択して下さい" %>
   </div>
   
   <div class="field">
