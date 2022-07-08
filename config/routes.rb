@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  namespace :public do
+    get 'carts/show'
+  end
   root to: "homes#top"
   get 'homes/about'
   devise_for :admins, skip: [:registrations, :passwords], controllers: {
