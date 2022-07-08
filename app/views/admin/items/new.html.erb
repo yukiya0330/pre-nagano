@@ -2,7 +2,7 @@
 <%= form_with url: admin_items_path, method: :post do |f| %>
   <div class="field">
     <label for="name" class="col col-xs-12 col-sm-4 col-md-3 control-label">商品画像</label>
-    <%= f.file_field :image_id, autofocus: true, autocomplete: "image_id" %>
+    <%= f.file_field :image, autofocus: true, autocomplete: "image" %>
   </div>
   
   <div class="field">
