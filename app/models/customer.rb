@@ -4,6 +4,16 @@ class Customer < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :items
   has_many :carts
+  
+  # enum customer_status: [:valid, :withdraw]
+  
+  def full_name
+    self.name_first + self.name_last
+  end
+  
+  def full_name_kana
+    self.name_first_kana + self.name_last_kana
+  end
+
 end
