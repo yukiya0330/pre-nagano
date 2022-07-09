@@ -1,0 +1,8 @@
+<h2>ジャンル編集</h2>
+<%= form_with url: admin_genre_path, method: :patch do |f| %>
+  <div class="field">
+    <label for="name" class="col col-xs-12 col-sm-4 col-md-3 control-label">ジャンル名</label>
+    <%= f.text_field :genre_name, autofocus: true, autocomplete: "introduction" %>
+    <%= f.submit "変更を保存" %>
+  </div>
+<% end %>
