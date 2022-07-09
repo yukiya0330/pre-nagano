@@ -1,5 +1,5 @@
 <h2>商品新規登録</h2>
-<%= form_with url: admin_items_path, method: :post do |f| %>
+<%= form_with model: @item, url: admin_items_path, method: :post do |f| %>
   <div class="field">
     <label for="name" class="col col-xs-12 col-sm-4 col-md-3 control-label">商品画像</label>
     <%= f.file_field :image, autofocus: true, autocomplete: "image" %>
@@ -17,7 +17,7 @@
   
   <div class="field">
     <label for="name" class="col col-xs-12 col-sm-4 col-md-3 control-label">ジャンル</label>
-    <%= f.collection_select :genre_id, Genre.all, :id, :name, include_blank: "選択して下さい" %>
+    <%= f.collection_select :genre_id, Genre.all, :id, :genre_name, include_blank: "選択して下さい" %>
   </div>
   
   <div class="field">
