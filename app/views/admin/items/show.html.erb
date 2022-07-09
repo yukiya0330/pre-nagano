@@ -4,10 +4,33 @@
   </div>
   <div class="row">
     <div class="col-4">
-      <%= attachment_image_tag @item, :image, format: 'jpeg', size: "100x100" %>
+      <%= attachment_image_tag @item, :image %>
     </div>
+    
     <div class="col-8">
-      <%= @item.name %>
+      <div class="field">
+        <label for="name" class="col col-xs-12 col-sm-4 col-md-3 control-label">商品</label>
+        <%= @item.name %>
+      </div>
+      <div class="field">
+        <label for="name" class="col col-xs-12 col-sm-4 col-md-3 control-label">商品説明</label>
+        <%= @item.introduction %>
+      </div>
+      <div class="field">
+        <label for="name" class="col col-xs-12 col-sm-4 col-md-3 control-label">ジャンル</label>
+        <%= @item.genre.genre_name %>
+      </div>
+      <div class="field">
+        <label for="name" class="col col-xs-12 col-sm-4 col-md-3 control-label">税込価格（税抜価格）</label>
+        <%= @item.price %>
+      </div>
+      <div class="field">
+        <label for="name" class="col col-xs-12 col-sm-4 col-md-3 control-label">販売ステータス</label>
+        <%= @item.item_status %>
+      </div>
+      <div class="actions">
+        <%= link_to "編集する", edit_admin_item_path(@item) %>
+      </div>
     </div>
   </div>
   </div>
