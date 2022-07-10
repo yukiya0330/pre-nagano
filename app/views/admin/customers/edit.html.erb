@@ -1,5 +1,5 @@
 <h2><%= @customer.full_name %>の会員情報編集</h2>
-<%= form_with model: @customer,url:admin_customer_path, method: :patch do |f| %>
+<%= form_with model: @customer,url: admin_customer_path, method: :patch do |f| %>
   <div class="field">
     <label for="name" class="col col-xs-12 col-sm-4 col-md-3 control-label">会員ID</label>
     <%= @customer.id %>
@@ -43,7 +43,7 @@
   
   <!--<div class="field">-->
   <!--  <label for="name" class="col col-xs-12 col-sm-4 col-md-3 control-label">会員ステータス</label>-->
-  <!--  <%#= f.collection_radio_buttons :customer_status, Customer.customer_statuses_i18n, :first , :last %>-->
+  <!--  <#%= f.collection_radio_buttons :is_deleted, Customer.is_deleteds_i18n, :first , :last %>-->
   <!--</div>-->
   
   <div class="actions">
