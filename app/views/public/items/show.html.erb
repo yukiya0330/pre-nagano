@@ -1,15 +1,24 @@
 <div class="container-fluid">
   <div class="row">
     <div class="mx-auto col-4">
-      <%= render "homes/genre_list" %>
+      <%= render "homes/genre_list", genres: Genre.all %>
     </div>
     
-    <div class="mx-auto col-8">
-      <p>画像挿入</p>
-      <p>題名</p>
-      <p>紹介文</p>
-      <p>価格</p>
-      <p>個数</p>
-    </div>  
+    <div class="col-3">
+      <%= attachment_image_tag @item, :image %>
+    </div>
+    
+    <div class="col-5">
+          <h3><%= @item.name %></h3>
+          <p><%= @item.introduction %></p>
+          <h4>¥<%= @item.price %>(税込)</h4>
+      <%= form_with model: @cart, url: public_carts_path, method: :post do |f| %>
+        <div class="field">
+          <%= f.hidden_field :item_id, :value => @item.id %>
+          <%= f.select :amount, *[1..10] %>
+          <%= f.submit "カートに入れる" %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
