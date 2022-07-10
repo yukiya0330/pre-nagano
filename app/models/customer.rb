@@ -6,7 +6,7 @@ class Customer < ApplicationRecord
 
   has_many :carts
   
-  # enum customer_status: [:valid, :withdraw]
+  # enum is_deleted: [:valid, :withdraw]
   
   def full_name
     self.name_first + self.name_last
