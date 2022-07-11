@@ -4,12 +4,13 @@ class Public::CartsController < ApplicationController
   end
   
   def create
-    @cart = Cart.create(cart_params)
-    @cart.save
+    cart = current_customer.carts.new(cart_params)
+    cart.save
+    redirect_to public_items_path
   end
   
   private
   def cart_params
-    params.permit(:item_id, :amount)
+    params.require(:cart).permit(:item_id, :amount)
   end
 end
