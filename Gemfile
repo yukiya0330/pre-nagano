@@ -58,3 +58,5 @@ gem 'devise'
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 gem "enum_help"
+gem 'better_errors'
+gem 'binding_of_caller'
