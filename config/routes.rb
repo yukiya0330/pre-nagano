@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   namespace :public do
     resources :items, only: [:index, :show]
     resources :carts, only: [:show, :create, :destroy, :update]
+    resources :customers, only: [:show, :edit, :update]
+    resources :deliveries, only: [:index, :edit,:create, :destroy, :update]
   end 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
