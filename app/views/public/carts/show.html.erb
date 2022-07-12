@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <h2>ショッピングカート</h2>
-    <%= link_to "カートを空にする", "#" %>
+    <%= link_to "カートを空にする","#" %>
     <table class="table table-bordered">
       <thead>
         <tr>
@@ -23,7 +23,7 @@
               <% end %>  
             </td>
             <td><%= "編集中" %></td>
-            <td><%= link_to "削除する", "#" %></td>
+            <td><%= link_to "削除する", public_cart_path(cart_item), method: :delete %></td>
           </tr>
         <% end %>
       </tbody>
