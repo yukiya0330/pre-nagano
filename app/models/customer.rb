@@ -6,6 +6,7 @@ class Customer < ApplicationRecord
 
   has_many :carts
   has_many :deliveries
+  has_many :orders
   
   # enum is_deleted: [:valid, :withdraw]
   
