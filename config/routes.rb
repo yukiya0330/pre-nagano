@@ -21,7 +21,8 @@ Rails.application.routes.draw do
     resources :carts, only: [:show, :create, :destroy, :update]
     resources :customers, only: [:show, :edit, :update]
     resources :deliveries, only: [:index, :edit,:create, :destroy, :update]
-    resources :orders, only: [:index, :show]
+    resources :orders, only: [:index, :show, :new, :create]
+    get  "orders/clear" => "orders#clear"
   end 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

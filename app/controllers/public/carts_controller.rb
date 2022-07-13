@@ -1,6 +1,7 @@
 class Public::CartsController < ApplicationController
   def show
-    @carts = Cart.all
+    @carts = current_customer.carts.all
+    @total = @carts.inject(0) { |sum, item| sum + item.subtotal }
   end
   
   def create
@@ -9,9 +10,14 @@ class Public::CartsController < ApplicationController
     redirect_to public_cart_path(cart)
   end
   
+  def update
+    cart = Cart.find_by(params[:id])
+    cart.update(cart_params)
+    redirect_to public_cart_path(cart)
+  end
+  
   def destroy
     cart = Cart.find(params[:id])
-    # cart.customer_id = current_customer.id
     cart.destroy
     redirect_to request.referer
   end

@@ -355,3 +355,7 @@ ja:
       customer_statuses:
         valid: "有効"
         withdraw: "退会"
+    order:
+      payment_method:
+        credit: "クレジットカード"
+        bank: "銀行振込"
