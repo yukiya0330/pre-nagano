@@ -19,7 +19,10 @@ Rails.application.routes.draw do
   namespace :public do
     resources :items, only: [:index, :show]
     resources :carts, only: [:show, :create, :destroy, :update]
-    resources :customers, only: [:show, :edit, :update]
+    resources :customers, only: [:show, :edit, :update] do
+      get "unsubscribe"
+      patch "withdrawal"
+    end  
     resources :deliveries, only: [:index, :edit,:create, :destroy, :update]
     resources :orders, only: [:index, :show, :new, :create]
     get  "orders/clear" => "orders#clear"
